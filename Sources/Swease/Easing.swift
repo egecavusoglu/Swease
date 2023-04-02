@@ -3,8 +3,8 @@
 import Foundation
 
 public enum Easing {
-    case ease_in
-    case ease_out
+    case easeIn
+    case easeOut
     case linear
-    case ease_in_out
+    case easeInOut
 }

@@ -25,7 +25,7 @@ final class SweaseTests: XCTestCase {
     func testEaseInSimple(){
         let outputs: [Double] = [0, 0.156, 1.25, 4.219, 10]
         for i in 0...testValues.count - 1 {
-            let computed = swease.map(value: testValues[i], easing: .ease_in)
+            let computed = swease.map(value: testValues[i], easing: .easeIn)
             XCTAssertEqual(computed, outputs[i], accuracy: accuracy)
         }
     }
@@ -33,7 +33,7 @@ final class SweaseTests: XCTestCase {
     func testEaseOut(){
         let outputs: [Double] = [0, 5.78, 8.75, 9.84, 10]
         for i in 0...testValues.count - 1 {
-            let computed = swease.map(value: testValues[i], easing: .ease_out)
+            let computed = swease.map(value: testValues[i], easing: .easeOut)
             XCTAssertEqual(computed, outputs[i], accuracy: accuracy)
         }
     }
@@ -41,7 +41,7 @@ final class SweaseTests: XCTestCase {
     func testEaseInOut(){
         let outputs: [Double] = [0, 0.625, 5, 9.375, 10]
         for i in 0...testValues.count - 1 {
-            let computed = swease.map(value: testValues[i], easing: .ease_in_out)
+            let computed = swease.map(value: testValues[i], easing: .easeInOut)
             XCTAssertEqual(computed, outputs[i], accuracy: accuracy)
         }
     }

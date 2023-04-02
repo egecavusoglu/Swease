@@ -26,11 +26,11 @@ public class Swease<T: Sweaseable> {
         switch easing {
         case .linear:
             return linearMap(value: value)
-        case .ease_in:
+        case .easeIn:
             return easeInMap(value: value)
-        case .ease_out:
+        case .easeOut:
             return easeOutMap(value: value)
-        case .ease_in_out:
+        case .easeInOut:
             return easeInOutMap(value: value)
         }
     }
