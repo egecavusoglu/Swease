@@ -61,7 +61,7 @@ public class Swease<T: Sweaseable> {
         return  T(easeInOutUnitVector) * outputDelta
     }
 
-    /** Calculates the delta of the input and output ranges.. */
+    /** Calculates the delta of the input and output ranges. */
     private func delta() -> (T, T) {
         let inputDelta = inputRange.upperBound - inputRange.lowerBound
         let outputDelta = outputRange.upperBound - outputRange.lowerBound
