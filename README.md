@@ -6,4 +6,4 @@ Easing functions provide us to map an input range to an output range in various 
 
 > Easing functions specify the rate of change of a parameter over time. - easings.net
 
-See [easings.net](https://easings.net/) for a more detailed look into specific each easing functions.
+See [easings.net](https://easings.net/) for a more detailed look into specifics each easing function.
