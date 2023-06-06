@@ -39,28 +39,28 @@ public class Swease<T: Sweaseable> {
 
     private func linearMap(value: T) -> T{
         let (inputDelta, outputDelta) = delta()
-        return value / inputDelta * outputDelta
+        return outputRange.lowerBound + value / inputDelta * outputDelta
     }
 
     private func easeInMap(value: T) -> T {
         let (inputDelta, outputDelta) = delta()
         let unitVector: Double = Double(value / inputDelta)
         let easeInUnitVector = pow(unitVector, 3)
-        return  T(easeInUnitVector) * outputDelta
+        return outputRange.lowerBound + T(easeInUnitVector) * outputDelta
     }
 
     private func easeOutMap(value: T) -> T {
         let (inputDelta, outputDelta) = delta()
         let unitVector: Double = Double(value / inputDelta)
         let easeOutUnitVector = 1 - pow(1.0 - unitVector, 3)
-        return  T(easeOutUnitVector) * outputDelta
+        return outputRange.lowerBound + T(easeOutUnitVector) * outputDelta
     }
 
     private func easeInOutMap(value: T) -> T {
         let (inputDelta, outputDelta) = delta()
         let unitVector: Double = Double(value / inputDelta)
         let easeInOutUnitVector = unitVector < 0.5 ? 4 * pow(unitVector, 3): 1 - pow(-2.0 * unitVector + 2, 3) / 2
-        return  T(easeInOutUnitVector) * outputDelta
+        return outputRange.lowerBound + T(easeInOutUnitVector) * outputDelta
     }
 
     /** Calculates the delta of the input and output ranges. */
