@@ -46,7 +46,13 @@ final class SweaseTests: XCTestCase {
         }
     }
 
-    func testRevertedRanges(){
-        // To do.
+    func testOutOfBounds_lower() {
+        let value = swease.map(value: -1, easing: .easeIn)
+        XCTAssertEqual(value, swease.inputRange.lowerBound)
+    }
+
+    func testOutOfBounds_upper() {
+        let value = swease.map(value: 2, easing: .easeIn)
+        XCTAssertEqual(value, swease.inputRange.upperBound)
     }
 }

@@ -18,9 +18,11 @@ public class Swease<T: Sweaseable> {
 
     /** Maps the @param value to an output based on the @param easing. */
     public func map(value: T, easing: Easing) -> T{
-        // Do NOT map if the value is not in the input range.
-        if (!inputRange.contains(value)){
-            return value
+        if (value < inputRange.lowerBound){
+            return inputRange.lowerBound
+        }
+        if (value > inputRange.upperBound){
+            return inputRange.upperBound
         }
         // Performs the map based on the easing type.
         switch easing {
