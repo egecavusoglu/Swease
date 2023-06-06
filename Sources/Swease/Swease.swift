@@ -19,10 +19,10 @@ public class Swease<T: Sweaseable> {
     /** Maps the @param value to an output based on the @param easing. */
     public func map(value: T, easing: Easing) -> T{
         if (value < inputRange.lowerBound){
-            return inputRange.lowerBound
+            return outputRange.lowerBound
         }
         if (value > inputRange.upperBound){
-            return inputRange.upperBound
+            return outputRange.upperBound
         }
         // Performs the map based on the easing type.
         switch easing {
