@@ -3,8 +3,5 @@
 import Foundation
 
 public enum Easing {
-    case easeIn
-    case easeOut
-    case linear
-    case easeInOut
+  case linear, easeIn, easeOut, easeInOut
 }
